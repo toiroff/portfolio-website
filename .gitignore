@@ -1,0 +1,4 @@
+db.sqlite3
+__pycashe__
+.env
+venv
