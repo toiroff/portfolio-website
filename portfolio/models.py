@@ -28,7 +28,7 @@ class TimeLine(models.Model):
 
 class Portfolio(models.Model):
     name = models.CharField(max_length=200)
-    img = models.ImageField(upload_to='static/img')
+    img = models.ImageField(upload_to='/img')
     github = models.URLField()
     telegram = models.URLField()
     google = models.URLField()
@@ -39,7 +39,7 @@ class Portfolio(models.Model):
 class Blog(models.Model):
     title = models.CharField(max_length=200)
     description  = models.TextField()
-    img = models.ImageField(upload_to='static/img')
+    img = models.ImageField(upload_to='/img')
 
     def __str__(self):
         return self.title
