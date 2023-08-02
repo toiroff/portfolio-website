@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import *
+from .serializers import FeedbackSerializer, BotUserSerializer
+from rest_framework.generics import ListCreateAPIView
 # Create your views here.
 
 def index(request):
@@ -25,3 +27,12 @@ def index(request):
 
         return redirect('index')
     return render(request,'index.html',ctg)
+
+
+class BotUserView(ListCreateAPIView):
+    queryset = BotUser.objects.all()
+    serializer_class = BotUserSerializer
+
+class FeedbackView(ListCreateAPIView):
+    queryset = Feedback.objects.all()
+    serializer_class = FeedbackSerializer
