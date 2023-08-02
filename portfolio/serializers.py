@@ -12,3 +12,13 @@ class FeedbackSerializer(ModelSerializer):
         model = Feedback
         fields = ('user_id','body','created_at')
 
+
+class AboutMeSerializer(ModelSerializer):
+    class Meta:
+        model = AboutMe
+        fields = ('information','projects','happy_clients','customers')
+
+class BlogSerializer(ModelSerializer):
+    class Meta:
+        model = Blog
+        fields = ('title','description')

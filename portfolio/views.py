@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import *
-from .serializers import FeedbackSerializer, BotUserSerializer
+from .serializers import FeedbackSerializer, BotUserSerializer,AboutMeSerializer,BlogSerializer
 from rest_framework.generics import ListCreateAPIView
 # Create your views here.
 
@@ -36,3 +36,11 @@ class BotUserView(ListCreateAPIView):
 class FeedbackView(ListCreateAPIView):
     queryset = Feedback.objects.all()
     serializer_class = FeedbackSerializer
+
+class AboutMeVIew(ListCreateAPIView):
+    queryset = AboutMe.objects.all()
+    serializer_class = AboutMeSerializer
+
+class BlogView(ListCreateAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
