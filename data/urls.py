@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from portfolio.views import index,FeedbackView, BotUserView,AboutMeVIew,BlogView
+from portfolio.views import index,FeedbackView, BotUserView,AboutMeVIew,BlogView,PortfolioView
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -27,6 +27,7 @@ urlpatterns = [
     path('api/v/feedbacks/', FeedbackView.as_view(), name='feedbacks'),
     path('api/v/about-me/', AboutMeVIew.as_view()),
     path('api/v/blog/', BlogView.as_view()),
+    path('api/v/portfolio/', PortfolioView.as_view()),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL , document_root = settings.STATIC_ROOT)

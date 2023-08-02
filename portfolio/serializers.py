@@ -22,3 +22,9 @@ class BlogSerializer(ModelSerializer):
     class Meta:
         model = Blog
         fields = ('title','description')
+
+
+class PortfolioSerializer(ModelSerializer):
+    class Meta:
+        model = Portfolio
+        fields = ('name','img','github','telegram','google')
