@@ -143,19 +143,23 @@
                 {% for p in portfolio %}
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="{{p.img}}" alt="">
+                        <img src="{{p.photo.url}}" >
                     </div>
+                    <div class="blog-text">
+                            <h4>
+                                {{p.name}}
+                            </h4>
+                    </div>
+
                     <div class="hover-items">
-                        <h3>{{p.name}}</h3>
+                        <h3>{{p.description}}</h3>
                         <div class="icons">
                             <a href="{{p.github}}" class="icon">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="{{p.telegram }}" class="icon">
-                                <i class="fab fa-telegram"></i>
-                            </a>
-                            <a href="{{p.google}}" class="icon">
-                                <i class="fab fa-google"></i>
+                            <a href="{{p.project_url }}" class="icon">
+                                <i class="fab fa-project"></i>
+
                             </a>
                         </div>
                     </div>

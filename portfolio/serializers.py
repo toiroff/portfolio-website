@@ -27,4 +27,4 @@ class BlogSerializer(ModelSerializer):
 class PortfolioSerializer(ModelSerializer):
     class Meta:
         model = Portfolio
-        fields = ('name','img','github','telegram','google')
+        fields = ('name','img','description','github','project_url')
